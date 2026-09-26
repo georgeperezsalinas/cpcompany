@@ -64,7 +64,10 @@ nav.menu a:hover, nav.menu a.active { color: var(--gold); }
 .btn.ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.4); }
 .btn.ghost:hover { border-color: var(--gold); color: var(--gold); }
 .btn.line { background: transparent; color: var(--navy); border: 1px solid #d9ceb0; }
+nav.menu a.btn.line { color: var(--navy); white-space: nowrap; }
+nav.menu a.btn.line:hover { color: var(--navy); background: #f7f1de; }
 .burger { display: none; background: none; border: 0; font-size: 26px; cursor: pointer; color: var(--navy); }
+.mail-bar { display: none; }
 
 .hero {
   position: relative; min-height: 86vh;
@@ -196,15 +199,36 @@ footer a:hover { color: var(--gold-soft); }
 }
 .cookie.show { display: flex; }
 
-@media (max-width: 980px) {
-  .grid-2, .grid-3, .grid-4, .contact-grid, footer .cols, .logos { grid-template-columns: 1fr 1fr; }
-  .burger { display: block; }
+@media (max-width: 1180px) {
+  .nav { flex-wrap: nowrap; gap: 10px; }
+  .brand { flex: 1; min-width: 0; }
+  .brand-text { min-width: 0; }
+  .brand-text strong, .brand-text span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .burger { display: block; flex-shrink: 0; order: 4; }
+  .mail-bar {
+    display: inline-flex; flex: 0 0 auto; order: 3;
+    align-items: center; justify-content: center;
+    width: auto; white-space: nowrap;
+    background: var(--gold); color: var(--navy); font-weight: 700;
+    font-size: 13px; line-height: 1; padding: 9px 12px; border-radius: 8px;
+  }
+  .mail-bar:hover { background: var(--gold-soft); color: var(--navy); }
+  nav.menu a.btn.line { display: none; }
   nav.menu {
-    display: none; position: absolute; left: 0; right: 0; top: 78px;
+    display: none; position: absolute; left: 0; right: 0; top: 100%;
     background: #fff; flex-direction: column; padding: 18px 20px 24px;
     border-bottom: 1px solid #eadfbf; align-items: flex-start;
+    z-index: 40;
   }
   nav.menu.open { display: flex; }
+}
+@media (max-width: 480px) {
+  .nav { flex-wrap: wrap; row-gap: 8px; padding-bottom: 10px; justify-content: flex-start; }
+  .brand { flex: 1 0 100%; }
+  .mail-bar { margin-left: auto; }
+}
+@media (max-width: 980px) {
+  .grid-2, .grid-3, .grid-4, .contact-grid, footer .cols, .logos { grid-template-columns: 1fr 1fr; }
   .hero { min-height: auto; }
 }
 @media (max-width: 640px) {
