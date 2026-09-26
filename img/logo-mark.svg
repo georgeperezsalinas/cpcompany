@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="CP Company">
+  <rect width="120" height="120" rx="22" fill="#0B1F33"/>
+  <rect x="4" y="4" width="112" height="112" rx="19" fill="none" stroke="#C9A227" stroke-width="2"/>
+  <!-- mountain / structure -->
+  <path d="M18 86 L44 48 L60 68 L78 42 L102 86 Z" fill="#123049"/>
+  <path d="M18 86 L44 48 L60 68 L52 86 Z" fill="#1A4466"/>
+  <path d="M44 48 L52 86 L18 86 Z" fill="#0E2A42"/>
+  <!-- gold ridge -->
+  <path d="M44 48 L60 68 L78 42" fill="none" stroke="#C9A227" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- baseline / foundation -->
+  <rect x="22" y="88" width="76" height="4" rx="2" fill="#C9A227"/>
+  <text x="60" y="34" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" font-weight="800" letter-spacing="2" fill="#E0C056">CP</text>
+</svg>

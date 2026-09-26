@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cpcompanysac.com/sitemap.xml
